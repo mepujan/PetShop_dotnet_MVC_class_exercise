@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+  <CanBuyHouse>
+    
+    <ExpectedResults>true</ExpectedResults>
+  </CanBuyHouse>
+  <CanBuyHouse>
+
+    <ExpectedResults>False</ExpectedResults>
+  </CanBuyHouse>
+</TestData>
