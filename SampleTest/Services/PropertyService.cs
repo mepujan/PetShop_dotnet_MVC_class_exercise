@@ -16,6 +16,7 @@ namespace SampleTest.Services
         public bool CanBuyHouse(Property property, string country)
         {
             //Return true if property's Country property is the same as the country parameter, return false otherwise
+            return property.Country.Equals(country);
         }
     }
 }

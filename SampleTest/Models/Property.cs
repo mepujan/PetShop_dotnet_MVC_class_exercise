@@ -1,7 +1,10 @@
-﻿using System;
+﻿using SampleTest.PositiveIntegerValidation;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace SampleTest.Models
 {
@@ -17,16 +20,21 @@ namespace SampleTest.Models
 
         public int ID { get; set; }
 
+        [MaxLength(100)]
         public string Address { get; set; }
 
+        [Remote("CheckCityName","Property",ErrorMessage ="City Name isnot Valid!!!")]
         public string City { get; set; }
 
         public string Country { get; set; }
 
+        [Required]
         public bool isForSale { get; set; }
 
         public ApplicationUser Owner { get; set; }
 
+        [Required]
+        [PositiveNumber(0)]
         public double Price { get; set; }
 
     }
